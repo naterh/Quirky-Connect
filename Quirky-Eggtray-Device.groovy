@@ -88,8 +88,8 @@ def parse(description) {
 	log.debug "parse() - $description"
 	def results = []
 
-	if (description?.name && description?.value)
-	{
+	if (description != "updated" && description?.name && description?.value)
+       {
 		results << sendEvent(name: "${description?.name}", value: "${description?.value}")
 	}
 }

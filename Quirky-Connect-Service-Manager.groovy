@@ -379,7 +379,7 @@ def initialize()
 
 					case "eggtray":
 						log.debug "we have an Egg Minder"
-						createChildDevice("Quirky Eggtray", deviceId, it.name, it.label)
+						createChildDevice("Quirky Eggtray", deviceId, it.name, it.model_name)
                         createWinkSubscription( it.subsPath, it.subsSuff )
                         getEggtrayUpdate(getChildDevice(deviceId))
 						break                     
